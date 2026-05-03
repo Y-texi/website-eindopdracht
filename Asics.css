@@ -97,3 +97,21 @@ body {
 #topBtn:hover {
     background-color: #555;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 90%;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
