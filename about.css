@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Hero met logo achtergrond */
+.hero {
+    background-image: url("afbeeldingen/nXSaH.jpg");
+    background-size: contain;      /* logo volledig zichtbaar */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+
+    /* Donkere overlay voor leesbaarheid */
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.image {
+    flex: 1;
+    min-width: 250px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
