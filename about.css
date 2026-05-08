@@ -1,80 +1,90 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 15px 30px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* Hero met logo achtergrond */
-.hero {
-    background-image: url("afbeeldingen/nXSaH.jpg");
-    background-size: contain;      /* logo volledig zichtbaar */
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    color: white;
+.about{
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     text-align: center;
-    padding: 80px 20px;
-
-    /* Donkere overlay voor leesbaarheid */
-    position: relative;
+    font-family: Arial, sans-serif;
 }
 
-.hero::before {
-    content: "";
+.about h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.about h2{
+    color: #ff4d00;
+    margin-bottom: 15px;
+}
+
+.about p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #676161;
+    margin-bottom: 20px;
+}
+
+.vision-box{
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+/* afbeelding */
+.hero-img{
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero h1,
-.hero p {
-    position: relative;
-    z-index: 1;
-}
-
-/* Content */
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px;
-    gap: 40px;
-    align-items: center;
-}
-
-.text {
-    flex: 1;
-    min-width: 250px;
-}
-
-.image {
-    flex: 1;
-    min-width: 250px;
-}
-
-.image img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* donkere overlay */
+.hero::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* tekst */
+.hero h1{
+    font-size: 70px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero p{
+    font-size: 22px;
+    max-width: 600px;
 }
